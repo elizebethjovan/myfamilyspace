@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Family Space</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(to right,#4facfe,#00f2fe);
+text-align:center;
+color:white;
+margin:0;
+}
+
+.login{
+background:white;
+color:black;
+width:300px;
+margin:100px auto;
+padding:20px;
+border-radius:10px;
+}
+
+button{
+padding:10px;
+border:none;
+background:#4facfe;
+color:white;
+border-radius:5px;
+}
+
+.gallery img{
+width:200px;
+margin:10px;
+border-radius:10px;
+}
+
+</style>
+
+<script>
+
+function login(){
+
+let password=document.getElementById("pass").value;
+
+if(password==="family123"){
+document.getElementById("loginbox").style.display="none";
+document.getElementById("gallery").style.display="block";
+}
+
+else{
+alert("Wrong password");
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>My Family Space</h1>
+
+<div id="loginbox" class="login">
+
+<h3>Family Login</h3>
+
+<input type="password" id="pass" placeholder="Enter Password">
+
+<br><br>
+
+<button onclick="login()">Login</button>
+
+</div>
+
+<div id="gallery" style="display:none">
+
+<h2>Family Photo Gallery</h2>
+
+<img src="https://picsum.photos/200?1">
+<img src="https://picsum.photos/200?2">
+<img src="https://picsum.photos/200?3">
+
+</div>
+
+</body>
+</html>
+
